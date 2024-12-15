@@ -10,7 +10,7 @@ function ModalSelect({label,required}) {
     width: "100%",
     gap: "60px",
   };
-  const styleSelect = { maxWidth: "500px", width: "100%" }; 
+  const styleSelect = { maxWidth: "500px", width: "100%", }; 
   const ageOptions = [
     { value: 10, label: "Ten" },
     { value: 20, label: "Twenty" },

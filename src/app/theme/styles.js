@@ -13,3 +13,16 @@ export const modalStyles = {
     boxShadow: 24,
     p: 4,
   };
+
+  export const componentSpacingStyles = {
+    justifyBetween:{
+      display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-between'
+    },
+    column:{
+      display:'flex',flexDirection:'column'
+    },
+    row:{
+      display:'flex',
+      flexDirection:'row'
+    }
+  }

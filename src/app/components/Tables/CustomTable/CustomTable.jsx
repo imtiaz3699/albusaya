@@ -7,9 +7,9 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Image from "next/image";
-import {Checkbox, Box, Pagination, Stack, Typography } from "@mui/material";
+import { Checkbox, Box, Pagination, Stack, Typography } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-
+import { useRouter } from "next/navigation";
 
 const columns = [
   {
@@ -118,15 +118,19 @@ const rowStyle = {
 };
 
 function CustomTable() {
+  const router = useRouter();
+  const handleRedirect = () => {
+    router.push("/dashboard/companies/view-user");
+  };
   return (
     <Box>
       <TableContainer component={Paper} sx={{ overflowY: "auto" }}>
         <Table sx={{ minWidth: "100%" }} aria-label="simple table">
-          <TableHead >
+          <TableHead>
             {columns?.map((element, dix) => (
               <TableRow key={element.date} sx={{ overflow: "auto" }}>
                 <TableCell align="left">
-                  <Checkbox/>
+                  <Checkbox />
                 </TableCell>
                 <TableCell align="left">
                   <Box sx={rowStyle}>
@@ -176,25 +180,34 @@ function CustomTable() {
           </TableHead>
           <TableBody>
             {rows?.map((row) => (
-              <TableRow key={row.name}>
+              <TableRow key={row.name} onClick={handleRedirect}>
                 <TableCell align="left">
-                  <Checkbox/>
+                  <Checkbox />
                 </TableCell>
-                <TableCell align="left" >
-                  {row.date}
-                </TableCell>
+                <TableCell align="left">{row.date}</TableCell>
                 <TableCell align="left">
                   <Box
-                    sx={{ display: "flex", flexDirection: "row",alignItems:'center', gap: "16px" }}
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      gap: "16px",
+                    }}
                   >
-                    <Image src={row?.fullName?.profileImage} width={34} height={34} style = {{borderRadius:'100%'}} alt = 'Prfile Picture' />{" "}
+                    <Image
+                      src={row?.fullName?.profileImage}
+                      width={34}
+                      height={34}
+                      style={{ borderRadius: "100%" }}
+                      alt="Prfile Picture"
+                    />{" "}
                     <span style={{ display: "flex", flexDirection: "column" }}>
                       {" "}
-                      <Typography variant = 'tableCellName'>
-                      {row.fullName.name}
+                      <Typography variant="tableCellName">
+                        {row.fullName.name}
                       </Typography>
-                      <Typography variant = 'tableCellEmail'>
-                      {row.email}
+                      <Typography variant="tableCellEmail">
+                        {row.email}
                       </Typography>
                     </span>
                   </Box>

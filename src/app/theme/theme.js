@@ -1,6 +1,12 @@
 "use client";
 import { createTheme } from "@mui/material";
-import { dataGridStyles, pagination, paginationItem, table, tableCell } from "./themeList";
+import {
+  dataGridStyles,
+  pagination,
+  paginationItem,
+  table,
+  tableCell,
+} from "./themeList";
 export const theme = createTheme({
   palette: {
     mode: "light",
@@ -32,7 +38,7 @@ export const theme = createTheme({
     fontWeightLight: 400,
     fontWeightMedium: 500,
     fontWeightSemibold: 600,
-    fontWeightBold:700,
+    fontWeightBold: 700,
     htmlFontSize: 35,
     h1: {
       fontSize: 25,
@@ -45,27 +51,46 @@ export const theme = createTheme({
       lineHeight: "22px",
       color: "#2F2B3DE5",
     },
-    tableCell:{
-      fontSize:'14px',
-      lineHeight:'22px',
-      fontWeight:"400",
-      color:'#2F2B3DE5',
+    fontGray16: {
+      fontSize: "16px",
+      lineHeight: "24px",
+      fontWeight: "400",
+      color: "#2F2B3D99",
     },
-    tableCellName:{
-      color:'#2F2B3DE5',
-      fontWeight:600,
-      fontSize:'14px',
-      lineHeight:'22px',
+
+    fontGrayDark16: {
+      fontSize: "16px",
+      lineHeight: "18px",
+      color: "#2F2B3DE5",
+      fontWeight: 500,
     },
-    tableCellEmail:{
-      color:'#2F2B3DB2',
-      fontWeight:400,
-      fontSize:'13px',
-      lineHeight:'20px',      
+    fontGrayDark18: {
+      fontSize: "18px",
+      lineHeight: "21.15px",
+      color: "#2F2B3D",
+      fontWeight: 600,
     },
-    pagination:{
-        fontSize:15,
-        fontWeight:400,
+    tableCell: {
+      fontSize: "14px",
+      lineHeight: "22px",
+      fontWeight: "400",
+      color: "#2F2B3DE5",
+    },
+    tableCellName: {
+      color: "#2F2B3DE5",
+      fontWeight: 600,
+      fontSize: "14px",
+      lineHeight: "22px",
+    },
+    tableCellEmail: {
+      color: "#2F2B3DB2",
+      fontWeight: 400,
+      fontSize: "13px",
+      lineHeight: "20px",
+    },
+    pagination: {
+      fontSize: 15,
+      fontWeight: 400,
     },
 
     button: {
@@ -195,7 +220,7 @@ export const theme = createTheme({
             "& input": {
               fontSize: "16px", // Ensure input text size matches root
               lineHeight: "1.5",
-              color:'#2F2B3DE5',
+              color: "#2F2B3DE5",
             },
             "& input::placeholder": {
               fontSize: "15px", // Placeholder font size
@@ -313,6 +338,9 @@ export const theme = createTheme({
           borderRadius: "6px", // Default border radius
           textTransform: "none", // Disable uppercase text
           width: "100%",
+          fontSize: 15,
+          fontWeight: 500,
+          lineHeight: 1.89,
         },
       },
       variants: [
@@ -358,11 +386,11 @@ export const theme = createTheme({
           },
         },
         {
-          props:{variant:'contained',color:'gray'},
+          props: { variant: "contained", color: "gray" },
           style: {
-              backgroundColor:'#80839029',
-              color:'#808390'
-          }
+            backgroundColor: "#80839029",
+            color: "#808390",
+          },
         },
         {
           props: { variant: "outlined", color: "error" },
@@ -374,14 +402,12 @@ export const theme = createTheme({
             },
           },
         },
-
       ],
-      
     },
-    MuiDataGrid:dataGridStyles,
-    MuiPaginationItem:paginationItem,
-    MuiPagination:pagination,
-    MuiTableCell:tableCell,
-    MuiTable:table,
+    MuiDataGrid: dataGridStyles,
+    MuiPaginationItem: paginationItem,
+    MuiPagination: pagination,
+    MuiTableCell: tableCell,
+    MuiTable: table,
   },
 });

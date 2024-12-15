@@ -89,7 +89,6 @@ export const tableCell = {
       color: "#2F2B3DE5",
       fontWeight: 700,
       lineHeight:'24px',
-
     },
   },
 };

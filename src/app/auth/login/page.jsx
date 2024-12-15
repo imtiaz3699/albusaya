@@ -24,7 +24,7 @@ function Login() {
       <Typography variant="caption" color="#2F2B3DB2">
         Please sign-in to your account and start your journey
       </Typography>
-      beta
+
       <Grid
         container
         direction="row"

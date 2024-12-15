@@ -33,7 +33,7 @@ const ageOptions = [
 const styleSelect = { maxWidth: "500px", width: "100%" };
 function AddUser({isModalOpen,setIsModalOpen}) {
   return (
-    <Grid container justifyContent={"start"} gap={"20px"} className = 'thin-scrollbar'>
+    <Grid container justifyContent={"start"} gap={"10px"} className = 'thin-scrollbar'>
       <Grid item sm={12} width={"100%"}>
         <Typography>Add Users</Typography>
         <Divider />
@@ -116,7 +116,6 @@ function AddUser({isModalOpen,setIsModalOpen}) {
       <ModalSelect label="City" required={true} />
       <ModalSelect label="Status" required={true} />
       <ModalSelect label="Company" required={true} />
-
     <div style = {{width:'100%',height:'1px',backgroundColor:"#2F2B3D40"}}></div>
 
       <Box
