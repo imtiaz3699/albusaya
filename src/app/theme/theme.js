@@ -104,6 +104,23 @@ export const theme = createTheme({
     },
   },
   components: {
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          color: "black", // Unchecked color
+          padding: "0px",
+          "&.Mui-checked": {
+            color: "#104774", // Checked color
+          },
+          "& .MuiSvgIcon-root": {
+            fontSize: 25, // Icon size
+          },
+          "&.MuiButtonBase-root": {
+            width: "20px",
+          },
+        },
+      },
+    },
     MuiTypography: {
       styleOverrides: {
         root: {
