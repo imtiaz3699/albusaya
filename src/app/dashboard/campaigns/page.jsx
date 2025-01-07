@@ -1,9 +1,10 @@
-import React from 'react'
+"use client";
 
 function Campaigns() {
+  
   return (
-    <div>Campaigns Page</div>
-  )
+    <div></div>
+  );
 }
 
-export default Campaigns
+export default Campaigns;

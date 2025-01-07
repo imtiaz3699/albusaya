@@ -31,3 +31,17 @@ body{
 	-webkit-box-shadow: #F8F7FA;
 	background-color: #F8F7FA;
 }
+
+.dashed-border {
+	width: 100%; /* Width of the element */
+	height: 1px; /* Height of the element */
+	background-image: repeating-linear-gradient(
+		to right,
+		#FFFFFF 0%, 
+		#FFFFFF 10px, /* Dash length */
+		transparent 10px, 
+		transparent 20px /* Gap length */
+	);
+	background-size: 20px 2px; /* Adjusts overall size */
+	border: none; /* Remove default border */
+}

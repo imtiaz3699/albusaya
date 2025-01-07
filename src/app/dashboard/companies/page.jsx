@@ -16,6 +16,7 @@ import ContactInfo from "./ModalComponents/ContactInfo";
 import CompanyLocations from "./ModalComponents/CompanyLocations";
 import SharedHeader from "@/app/components/SharedHeader/SharedHeader";
 import CompaniesCard from "@/app/components/CompaniesComponents/CompaniesCard";
+import EmptyComponent from "@/app/components/EmptyComponent/EmptyComponent";
 const modalStyles = {
   position: "absolute",
   top: "50%",
@@ -94,12 +95,20 @@ export default function Page() {
     },
    ]
    useEffect(()=> {
-    addCompany(companiesData)
+    if(companiesData?.length > 0) {
+      addCompany(companiesData)
+    }
+    
    },[])
    
   return (
     <Grid>
-      <SharedHeader isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <SharedHeader 
+      isModalOpen={isModalOpen} 
+      setIsModalOpen={setIsModalOpen}
+      name = 'Companies'
+      btnText={'Add Company'}
+       />
       <Divider />
       {/* <CompaniesCard/> */}
       <Grid
@@ -110,43 +119,14 @@ export default function Page() {
       >
        {
         companies?.length > 0 ? <CompaniesCard data = {companiesData}/> :
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "30px",
-          }}
-        >
-          <Image src="/objectsimage.png" width={425} height={345} alt="" />
+        <EmptyComponent
+          setIsModalOpen={setIsModalOpen}
+          btnText='Add Company'
+          heading = 'No Companies Registered'
+          description={'Please click the button below to add a new company.'}
 
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: "10px",
-            }}
-          >
-            <Typography variant="customSubtitle">
-              No Companies Registered
-            </Typography>
-            <Typography variant="caption">
-              Please click the button below to add a new company.
-            </Typography>
-          </Box>
-
-          <Button
-            style={{ maxWidth: "169px" }}
-            variant="contained"
-            color="primary"
-            onClick={() => setIsModalOpen(true)}
-          >
-            <AddIcon /> Add Company
-          </Button>
-        </Box>
+        />
         }
-
 
       </Grid>
       <CustomModal
@@ -171,6 +151,7 @@ export default function Page() {
                 {tabsData?.map((element, idx) => {
                   return (
                     <Tab
+                    key = {idx}
                       label={
                         <Box
                           sx={{

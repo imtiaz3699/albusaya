@@ -13,6 +13,7 @@ function CompaniesCard({ data }) {
     {data?.map((element, idx) => (
       
         <Card
+          key = 'idx'
           sx={{
             maxWidth: "514px",
             width: "100%",

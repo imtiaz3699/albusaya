@@ -82,7 +82,7 @@ function Sidebar() {
         return (
           <Box
             component={Link}
-            href={element?.url}
+            href={element?.items?.[0]?.url}
             key={idx}
             sx={{
               textDecoration: "none",
@@ -166,6 +166,7 @@ function Sidebar() {
                     const path = pathName === item.url;
                     return (
                       <Box
+                      key = {index}
                         sx={{
                           textDecoration: "none",
                           color: `text.primary`,

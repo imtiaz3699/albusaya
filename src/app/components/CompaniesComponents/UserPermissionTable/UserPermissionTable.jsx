@@ -267,6 +267,7 @@ function UserPermissionTable() {
                               {element?.subKeys?.map((subkey, idx) => {
                                 return (
                                     <Checkbox
+                                    key = {idx}
                                       sx={{
                                         color: "black", // Unchecked color
                                         padding:'0px',
@@ -290,6 +291,7 @@ function UserPermissionTable() {
                               {element?.subKeys?.map((subkey, idx) => {
                                 return (
                                     <Checkbox
+                                    key = {idx}
                                       sx={{
                                         color: "black", // Unchecked color
                                         padding:'0px',
@@ -313,6 +315,7 @@ function UserPermissionTable() {
                               {element?.subKeys?.map((subkey, idx) => {
                                 return (
                                     <Checkbox
+                                    key = {idx}
                                       sx={{
                                         color: "black", // Unchecked color
                                         padding:'0px',
@@ -336,6 +339,7 @@ function UserPermissionTable() {
                               {element?.subKeys?.map((subkey, idx) => {
                                 return (
                                     <Checkbox
+                                    key = {idx}
                                       sx={{
                                         color: "black", // Unchecked color
                                         padding:'0px',
