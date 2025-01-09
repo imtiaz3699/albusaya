@@ -6,7 +6,7 @@ export const CampaignsProvider = ({ children }) => {
   const [campaigns, setCampaigns] = useState([]);
   const [isModalOpen,setIsModalOpen] = useState(false)
   const addCampaign = (company) => {
-    setCampaigns((prevCompanies) => [...prevCompanies, company]);
+    setCampaigns((prevCompanies) => company);
   };
   const removeCampaign = (companyId) => {
     setCampaigns((prevCompanies) => prevCompanies.filter(company => company.id !== companyId));

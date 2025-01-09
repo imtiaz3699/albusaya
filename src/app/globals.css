@@ -45,3 +45,27 @@ body{
 	background-size: 20px 2px; /* Adjusts overall size */
 	border: none; /* Remove default border */
 }
+
+.react-datepicker-wrapper{
+	height: 38px !important;
+	border-radius: 6px;
+	width:100% !important;
+	border: 1px solid #2F2B3D40;
+}
+.react-datepicker-ignore-onclickoutside{
+	height: 38px !important;
+	border-radius: 6px;
+	width:100% !important;
+	border: 1px solid #2F2B3D40;
+	
+
+}
+.react-datepicker__input-container{
+	height: 38px !important;
+	border-radius: 6px;
+	width:100% !important;
+	border: 1px solid #2F2B3D40;
+	display: flex !important;
+	align-items: center  !important;
+	
+}

@@ -25,6 +25,9 @@ export const theme = createTheme({
     info: {
       main: "#0eaeff",
     },
+    green:{
+      main:'#26BD6C',
+    },
     text: {
       primary: "#2F2B3DE5",
       secondary: "#2F2B3DB2",
@@ -131,11 +134,21 @@ export const theme = createTheme({
         {
           props: { variant: "customTitle" },
           style: {
-            fontSize: "20",
+            fontSize: "20px",
             fontWeight: 500,
             lineHeight: 1.5,
             letterSpacing: "0.1em",
             color: "#4B465C",
+          },
+        },
+        {
+          props: { variant: "customTitleModal" },
+          style: {
+            fontSize: "20px",
+            fontWeight: 600,
+            lineHeight: 1.5,
+            letterSpacing: "0.1em",
+            color: "#000000",
           },
         },
         {
@@ -368,6 +381,30 @@ export const theme = createTheme({
             color: "#FFFFFF",
             "&:hover": {
               backgroundColor: "#1d4563",
+            },
+          },
+        },
+        {
+          props: { variant: "contained", color: "border-button-white" },
+          style: {
+            backgroundColor: "#FFFFFF",
+            color: "#FFFFFF",
+            border:'1px solid #104774',
+            color:'#104774',
+            "&:hover": {
+              backgroundColor: "",
+            },
+          },
+        },
+        {
+          props: { variant: "contained", color: "border-button-red" },
+          style: {
+            backgroundColor: "#EB5757",
+            color: "#FFFFFF",
+            border:'1px solid #104774',
+            color:'#104774',
+            "&:hover": {
+              backgroundColor: "",
             },
           },
         },
